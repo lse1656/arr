@@ -1,0 +1,14 @@
+.label {
+  display: flex;
+
+  img {
+    width: 33px;
+    height: auto;
+  }
+
+  @include responsive {
+    img {
+      width: 45px;
+    }
+  }
+}
