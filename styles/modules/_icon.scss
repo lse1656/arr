@@ -1,0 +1,33 @@
+.main-cart,
+.recent,
+.search-btn {
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.main-cart {
+  display: inline-block;
+  background: url('./assets/images/ico_cart.svg') no-repeat center;
+}
+
+.recent {
+  display: inline-block;
+  background: url('./assets/images/ico_recent.svg') no-repeat center;
+}
+
+.search-btn {
+  background: url('./assets/images/ico_search.svg') no-repeat center;
+}
+
+.cart-btn {
+  width: 30px;
+  height: 30px;
+  background: url('./assets/images/ico_cart_mini.png') no-repeat center;
+  background-size: contain;
+
+  @include responsive {
+    width: 40px;
+    height: 40px;
+  }
+}
