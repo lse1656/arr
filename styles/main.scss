@@ -1,10 +1,15 @@
 @import './constants/breakpoint';
 @import './constants/font';
+@import './constants/color';
 
 @import './base/reset';
 @import './base/global';
 
 @import './mixins/responsive';
+@import './mixins/flex';
+@import './mixins/position';
 
 @import './modules/label';
 @import './modules/icon';
+
+@import './layouts/header';
