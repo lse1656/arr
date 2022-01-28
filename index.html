@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="./style.css" />
 
     <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <link
       href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
       rel="stylesheet"
       type="text/css"
@@ -71,13 +77,13 @@
               </li>
             </ul>
           </nav>
-          
-          <button class="menu-btn sm-only">
+
+          <button class="menu-btn lg-hidden">
             <span class="ham-wrap">
               <span></span>
               <span></span>
               <span></span>
-            </sp>
+            </span>
           </button>
           <div class="header-right">
             <div class="link-group lg-only">
@@ -101,8 +107,108 @@
       </div>
     </header>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cumque veniam aut officia voluptas dignissimos vitae, repellendus inventore possimus quam culpa eligendi! Incidunt placeat dicta doloribus, harum dignissimos nobis vitae.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, temporibus illo. Explicabo animi vitae facilis eum consequatur, ut eaque repellendus. Ex doloribus dicta facilis aliquid iste quasi deserunt numquam commodi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis odio et quod asperiores sunt, autem dolorem at sequi minima illo libero. Vel reprehenderit nemo, labore corrupti distinctio rerum magnam itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, quas saepe. Laudantium explicabo beatae sit dolorum voluptatum cum exercitationem possimus sequi aut, adipisci natus, ducimus voluptate obcaecati praesentium minima facere! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, cupiditate. Tempora eligendi, earum vero itaque, architecto eos sed ut a, obcaecati maiores voluptatibus dolorem. Accusamus provident cumque rerum enim quaerat! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, sint, saepe numquam aperiam veniam unde hic possimus doloribus omnis quae quod eligendi quas sed? Consectetur recusandae reiciendis laudantium adipisci? Ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sint laudantium earum corrupti est dolor, similique neque dolores sit rerum aut odit odio praesentium laborum ut veniam tenetur deleniti optio!</p>
-  </body>
+    <section class="section visual">
+      <div class="inner">
+        <div class="visual-wrapper">
+          <div class="visual-slider">
+            <ul class="visual-slider-wrap">
+              <li class="visual-slider-item item01">
+                <div class="txt">
+                  <a href="#">
+                    <h3>설레는 날, 설날 선물</h3>
+                    <p>
+                      설날 기념 복주머니 쿠폰 3종 드려요.<br />
+                      혜택 받고 풍성한 명절 되세요!
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <li class="visual-slider-item item02">
+                <div class="txt">
+                  <a href="#">
+                    <h3>
+                      모래 맛집 아르르,<br />더 얇은 극세사 두부모래<br
+                        class="lg-hidden"
+                      />출시!
+                    </h3>
+                    <p>
+                      1.2mm의 가는 입자로 기호성은 높이고<br />
+                      탈취력, 응고력까지 잡았어요.
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <li class="visual-slider-item item03">
+                <div class="txt">
+                  <a href="#">
+                    <h3>겨울 시즌오프</h3>
+                    <p>
+                      댕냥이 모두의 반려템!<br />
+                      꿀잠방석과 꿀잠담요, 발열패딩까지
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <li class="visual-slider-item item04">
+                <div class="txt">
+                  <a href="#">
+                    <h3>
+                      2022 새해맞이<br />
+                      행복 습관 기획전
+                    </h3>
+                    <p>
+                      위클리 해피루틴 다운받고<br />
+                      아르르와 함께 행복한 습관 만들기
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <li class="visual-slider-item item05">
+                <div class="txt">
+                  <a href="#">
+                    <h3>휴지기 없이 오래 먹이는<br />아르르 독 치어 영양제</h3>
+                    <p>
+                      우리 아이 건강은 잘 챙겨주고 있나요?<br />
+                      하루 1포로 챙기는 건강
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <li class="visual-slider-item item06">
+                <div class="txt">
+                  <a href="#">
+                    <h3>필수 영양성분 함유<br />아르르 캣 치어 영양제</h3>
+                    <p>
+                      입맛 까다로운 우리 아이에게-<br />
+                      몸에 좋은 것도 맛있게 먹여요.
+                    </p>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script src="./js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $('.visual-slider-wrap').slick({
+          adaptiveHeight: '456px',
+          nextArrow: '<button type="button" class="slick-next"></button>',
+          prevArrow: '<button type="button" class="slick-prev"></button>',
+        });
+      });
+    </script>
+
+    <script src="./js/main.js"></script>
+  </body>
 </html>

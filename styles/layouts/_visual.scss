@@ -1,0 +1,175 @@
+.visual {
+  .slick-slide {
+    height: 456px;
+  }
+
+  .slick-arrow {
+    @include center-y;
+    z-index: 5;
+    width: 25px;
+    height: 25px;
+    background: url('../../assets/images/ico_arrow.svg') no-repeat center;
+    background-size: contain;
+
+    &.slick-prev {
+      left: 10px;
+      transform: rotate(90deg);
+    }
+
+    &.slick-next {
+      right: 10px;
+      transform: rotate(-90deg);
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &-slider-item {
+    position: relative;
+
+    .txt {
+      position: absolute;
+      top: 22%;
+      left: 8%;
+
+      a {
+        display: block;
+      }
+
+      h3 {
+        margin-bottom: 5px;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: -0.05em;
+      }
+
+      p {
+        font-family: $font-desc;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+    }
+
+    &.item01 {
+      color: $gray;
+      background: url('./assets/images/seollalcoupon_main_mo.jpg') no-repeat
+        center;
+      background-size: cover;
+    }
+
+    &.item02 {
+      color: $brown;
+      background: url('./assets/images/microtofu_banner_mo.jpg') no-repeat
+        center;
+      background-size: cover;
+    }
+
+    &.item03 {
+      color: $green;
+      background: url('./assets/images/main-banner-mo.png') no-repeat center;
+      background-size: cover;
+    }
+
+    &.item04 {
+      color: $orange;
+      background: url('./assets/images/2022happy_banner_mo.jpg') no-repeat
+        center;
+      background-size: cover;
+    }
+
+    &.item05 {
+      color: $blue;
+      background: url('./assets/images/d_main_MO.png') no-repeat center;
+      background-size: cover;
+    }
+
+    &.item06 {
+      color: $purple;
+      background: url('./assets/images/cat_main_MO.png') no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  @include responsive(T) {
+    &-slider-item {
+      .txt {
+        h3 {
+          margin-bottom: 15px;
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  @include responsive {
+    .slick-slide {
+      height: 525px;
+    }
+
+    .slick-arrow {
+      width: 40px;
+      height: 40px;
+    }
+
+    &-slider-item {
+      .txt {
+        top: 44%;
+        left: 10%;
+
+        h3 {
+          font-size: 45px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+
+      &.item01 {
+        color: $gray;
+        background: url('../../assets/images/seollalcoupon_main_pc.jpg')
+          no-repeat center;
+        background-size: cover;
+      }
+
+      &.item02 {
+        color: $brown;
+        background: url('./assets/images/microtofu_banner_pc.jpg') no-repeat
+          center;
+        background-size: cover;
+      }
+
+      &.item03 {
+        color: $green;
+        background: url('./assets/images/main-banner-star.jpg') no-repeat center;
+        background-size: cover;
+      }
+
+      &.item04 {
+        color: $orange;
+        background: url('./assets/images/2022happy_banner_pc.jpg') no-repeat
+          center;
+        background-size: cover;
+      }
+
+      &.item05 {
+        color: $blue;
+        background: url('./assets/images/d_main_pc.png') no-repeat center;
+        background-size: cover;
+      }
+
+      &.item06 {
+        color: $purple;
+        background: url('./assets/images/cat_main_PC.png') no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+}
