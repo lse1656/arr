@@ -1,6 +1,10 @@
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: transparent;
+  transition: background-color 200ms ease-in-out;
 
   &-wrapper {
     @include flex(between);
@@ -50,8 +54,35 @@
     }
   }
 
-  .icon-group {
+  .header-right {
     @include flex;
+
+    .link-group {
+      a {
+        display: inline-block;
+        padding-right: 15px;
+        line-height: 40px;
+        color: $primary;
+        transition: opacity 300ms ease-in-out;
+      }
+
+      a:hover,
+      a:active {
+        opacity: 0.6;
+      }
+    }
+
+    .button-group {
+      @include flex;
+      transition: opacity 300ms ease-in-out;
+
+      button:hover,
+      button:active,
+      a:hover,
+      a:active {
+        opacity: 0.6;
+      }
+    }
   }
 
   @include responsive {
@@ -64,6 +95,10 @@
       position: static;
       width: 160px;
       transform: none;
+    }
+
+    &:hover {
+      background-color: $white;
     }
   }
 }
