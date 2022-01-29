@@ -1,0 +1,135 @@
+.recom-product {
+  padding: 25px 0;
+  background-color: $background1;
+
+  &-slider {
+    .product-infor {
+      @include column-flex;
+      width: 220px;
+      padding: 0 10px;
+      text-align: center;
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: $primary;
+      }
+
+      p {
+        font-family: $font-desc;
+        font-size: 13px;
+        line-height: 1.6;
+        word-break: keep-all;
+      }
+
+      &::before {
+        display: inline-block;
+        width: 100%;
+        height: 250px;
+        margin-bottom: 15px;
+        border: 1px solid $border;
+        content: '';
+        transition: opacity 200ms ease-in-out;
+      }
+    }
+
+    .slider-item {
+      margin-right: 15px;
+
+      a:active {
+        .product-infor::before {
+          opacity: 0.7;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.item01 .product-infor::before {
+        background: url('./assets/images/main_cushion_mo.jpg');
+        background-size: cover;
+      }
+
+      &.item02 .product-infor::before {
+        background: url('./assets/images/blanket_main_s2.jpg');
+        background-size: cover;
+      }
+
+      &.item03 .product-infor::before {
+        background: url('./assets/images/harness_lavender.jpg');
+        background-size: cover;
+      }
+
+      &.item04 .product-infor::before {
+        background: url('./assets/images/cushionv2_main_s2.jpg');
+        background-size: cover;
+      }
+
+      &.item05 .product-infor::before {
+        background: url('./assets/images/main_top_rcmnd_5.jpg');
+        background-size: cover;
+      }
+
+      &.item06 .product-infor::before {
+        background: url('./assets/images/main_top_rcmnd_2.jpg');
+        background-size: cover;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    padding: 35px 0;
+
+    &-slider {
+      .slider-item {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  @include responsive {
+    &-slider {
+      .product-infor {
+        h3 {
+          font-size: 25px;
+        }
+      }
+
+      .slider-item {
+        margin-right: 55px;
+
+        a:hover {
+          .product-infor::before {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .slick-arrow {
+        @include center-y;
+        z-index: 5;
+        width: 40px;
+        height: 40px;
+        background: url('./assets/images/ico_arrow.svg') no-repeat center;
+        background-size: contain;
+
+        &.slick-prev {
+          left: 0;
+          transform: rotate(90deg);
+        }
+
+        &.slick-next {
+          right: 0;
+          transform: rotate(-90deg);
+        }
+
+        &:active {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
