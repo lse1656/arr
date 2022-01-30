@@ -1,0 +1,93 @@
+.banner-section {
+  .banner {
+    height: 100vw;
+    color: $white;
+
+    a {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-txt {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+
+      .banner-label {
+        display: inline-block;
+        margin-bottom: 2px;
+        font-size: 14px;
+        letter-spacing: -0.07em;
+      }
+
+      .banner-title {
+        font-size: 24px;
+        line-height: 1.3;
+      }
+
+      .banner-desc {
+        font-family: $font-desc;
+        font-size: 15px;
+      }
+    }
+
+    &.banner01 {
+      width: 100%;
+      background: url('../../assets/images/motherk.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    &.banner02 {
+      width: 100%;
+      background: url('../../assets/images/section4_blanket.jpg') no-repeat
+        center;
+      background-size: cover;
+    }
+  }
+
+  .banner-bottom {
+    .banner03 {
+      .banner-txt {
+        @include center;
+        width: 100%;
+        color: $beige;
+        text-align: center;
+      }
+
+      video {
+        object-fit: cover;
+      }
+    }
+  }
+
+  @include responsive {
+    .banner {
+      height: 50vw;
+
+      &-txt {
+        .banner-label {
+          display: inline-block;
+          margin-bottom: 2px;
+          font-size: 14px;
+          letter-spacing: -0.07em;
+        }
+
+        .banner-title {
+          font-size: 42px;
+          font-weight: 300;
+          line-height: 1.2;
+        }
+
+        .banner-desc {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .banner-top {
+      @include flex;
+    }
+  }
+}
