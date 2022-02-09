@@ -31,3 +31,16 @@
     height: 40px;
   }
 }
+
+.tab-arrow {
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  background: url('../../assets/images/ico_footer_arrow.svg') no-repeat center;
+  background-size: contain;
+  transition: transform 300ms ease-in-out;
+
+  @include responsive {
+    display: none;
+  }
+}
