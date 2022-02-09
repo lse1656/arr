@@ -8,7 +8,7 @@
     z-index: 5;
     width: 25px;
     height: 25px;
-    background: url('../../assets/images/ico_arrow.svg') no-repeat center;
+    background: url('./assets/images/ico_arrow.svg') no-repeat center;
     background-size: contain;
 
     &.slick-prev {
@@ -134,8 +134,8 @@
 
       &.item01 {
         color: $gray;
-        background: url('../../assets/images/seollalcoupon_main_pc.jpg')
-          no-repeat center;
+        background: url('./assets/images/seollalcoupon_main_pc.jpg') no-repeat
+          center;
         background-size: cover;
       }
 
