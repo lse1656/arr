@@ -1,6 +1,14 @@
-// const header = document.querySelector('.header');
-// const lnb = document.querySelectorAll('.lnb');
+const header = document.querySelector('.header-wrapper');
+const gnb = document.querySelector('.gnb');
+const lnb = document.querySelectorAll('.lnb');
 
+// gnb.addEventListener('mouseover', () => {
+//   header.style.height = '360px';
+// });
+
+// gnb.addEventListener('mouseleave', () => {
+//   header.style.height = '100px';
+// });
 // lnb.forEach((element) => {
 //   element.addEventListener('mouseover', () => {
 //     header.style.height = '320px';
@@ -8,19 +16,19 @@
 // });
 
 //footer-tab
+const tabItem = document.querySelectorAll(
+  '.footer-tab .tab-menu .tab-menu-item'
+);
 
-const matchItem = document.querySelectorAll('.footer-tab .tab-menu-item');
-
-for (i = 0; i < matchItem.length; i++) {
-  matchItem[i].addEventListener('click', (e) => {
+tabItem.forEach((element) => {
+  element.addEventListener('click', (e) => {
     e.preventDefault();
-
-    for (j = 0; j < matchItem.length; j++) {
-      matchItem[j].classList.remove('active');
-    }
+    tabItem.forEach((element) => {
+      element.classList.remove('active');
+    });
     e.target.parentNode.classList.add('active');
   });
-}
+});
 
 // sidebar 나타나기
 const menuBtn = document.querySelector('.menu-btn');
