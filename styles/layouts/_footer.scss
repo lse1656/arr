@@ -51,10 +51,8 @@
 
       &-item.active {
         .tab-content {
-          max-height: 100%;
+          display: block;
           margin-bottom: 20px;
-          opacity: 1;
-          visibility: unset;
         }
 
         button i {
@@ -63,11 +61,8 @@
       }
 
       .tab-content {
-        max-height: 0;
+        display: none;
         font-size: 11px;
-        opacity: 0;
-        visibility: visible;
-        transition: all 300ms;
 
         ul {
           margin-bottom: 20px;
@@ -118,10 +113,8 @@
           }
 
           .tab-content {
-            max-height: 100%;
+            display: block;
             font-size: 12px;
-            opacity: 1;
-            visibility: unset;
           }
 
           &:last-child {
