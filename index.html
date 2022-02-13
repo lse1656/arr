@@ -1029,47 +1029,7 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script>
-      $(document).ready(function () {
-        $('.visual-slider-wrap').slick({
-          adaptiveHeight: '456px',
-          nextArrow: '<button type="button" class="slick-next"></button>',
-          prevArrow: '<button type="button" class="slick-prev"></button>',
-          autoplay: true,
-        });
-
-        $('.recom-product-slider .slider').slick({
-          arrows: true,
-          nextArrow: '<button type="button" class="slick-next"></button>',
-          prevArrow: '<button type="button" class="slick-prev"></button>',
-          slidesToShow: 1,
-          centerMode: true,
-          variableWidth: true,
-          responsive: [
-            {
-              breakpoint: 900,
-              settings: {
-                arrows: false,
-              },
-            },
-          ],
-        });
-
-        $('.review-list').slick({
-          arrows: false,
-          centerMode: true,
-          variableWidth: true,
-          infinite: false,
-          mobileFirst: true,
-          responsive: [
-            {
-              breakpoint: 1280,
-              draggable: false,
-            },
-          ],
-        });
-      });
-    </script>
+    <script src="./js/slickSlide.js"></script>
 
     <script src="./js/main.js"></script>
   </body>
