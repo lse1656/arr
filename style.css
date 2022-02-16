@@ -1,0 +1,910 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff"); }
+
+@font-face {
+  font-family: 'BMJUA';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  margin: 0;
+  font-family: "GmarketSansMedium", sans-serif;
+  box-sizing: border-box; }
+
+html {
+  font-family: "GmarketSansMedium", sans-serif; }
+
+body {
+  font-family: "GmarketSansMedium", sans-serif;
+  font-size: 13px;
+  color: #4c4c4c; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 0; }
+  button:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: none; }
+
+a,
+button {
+  color: inherit;
+  cursor: pointer; }
+
+button {
+  padding: 0; }
+
+ul,
+li,
+ol {
+  padding-left: 0;
+  list-style: none; }
+
+address {
+  font-style: normal; }
+
+img,
+video {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important; }
+
+@media screen and (min-width: 500px) {
+  .sm-only {
+    display: none !important; } }
+
+@media screen and (max-width: 499px) and (min-width: 900px) {
+  .md-only {
+    display: none !important; } }
+
+@media screen and (max-width: 899px) {
+  .lg-only {
+    display: none !important; } }
+
+@media screen and (max-width: 499px) {
+  .sm-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 500px) and (max-width: 899px) {
+  .md-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 900px) {
+  .lg-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 1280px) {
+  .inner {
+    width: 1280px;
+    margin: 0 auto; } }
+
+.label {
+  display: flex; }
+  .label img {
+    width: 33px;
+    height: auto; }
+  @media screen and (min-width: 900px) {
+    .label img {
+      width: 45px; } }
+
+.main-cart,
+.recent,
+.search-btn {
+  width: 40px;
+  height: 40px;
+  background-size: contain; }
+
+.main-cart {
+  display: inline-block;
+  background: url("./assets/images/ico_cart.svg") no-repeat center; }
+
+.recent {
+  display: inline-block;
+  background: url("./assets/images/ico_recent.svg") no-repeat center; }
+
+.search-btn {
+  background: url("./assets/images/ico_search.svg") no-repeat center; }
+
+.cart-btn {
+  width: 30px;
+  height: 30px;
+  background: url("./assets/images/ico_cart_mini.png") no-repeat center;
+  background-size: contain; }
+  @media screen and (min-width: 900px) {
+    .cart-btn {
+      width: 40px;
+      height: 40px; } }
+
+.tab-arrow {
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  background: url("../../assets/images/ico_footer_arrow.svg") no-repeat center;
+  background-size: contain;
+  transition: transform 300ms ease-in-out; }
+  @media screen and (min-width: 900px) {
+    .tab-arrow {
+      display: none; } }
+
+.section-title {
+  font-size: 20px;
+  color: #477a7b;
+  text-align: center; }
+  @media screen and (min-width: 900px) {
+    .section-title {
+      font-size: 28px; } }
+
+.gnb {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+  .gnb-list {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .gnb-item {
+    position: relative;
+    padding-right: 6px; }
+    .gnb-item:last-child {
+      padding-right: 0; }
+    .gnb-item h3 {
+      padding: 0 10px; }
+      .gnb-item h3 a {
+        display: inline-block;
+        font-family: "BMJUA", sans-serif;
+        font-size: 22px;
+        line-height: 100px;
+        color: #477a7b; }
+  .gnb:hover .lnb {
+    height: 300px;
+    opacity: 1;
+    visibility: visible; }
+  .gnb .lnb {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: height 200ms ease-in-out, visibility 200ms ease-in-out, opacity 200ms ease-in-out; }
+    .gnb .lnb-item {
+      margin-bottom: 5px;
+      text-align: center; }
+      .gnb .lnb-item a {
+        position: relative;
+        display: inline-block;
+        padding: 5px;
+        font-family: "BMJUA", sans-serif;
+        font-size: 20px;
+        color: #477a7b; }
+        .gnb .lnb-item a:hover:after {
+          transform: scale(1);
+          transform-origin: 0% 50%; }
+        .gnb .lnb-item a::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #477a7b;
+          content: '';
+          transform: scale(0);
+          transition: transform 300ms ease-in-out; }
+
+.review-card {
+  width: 215px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #c6bcaa; }
+  .review-card a {
+    display: block; }
+  .review-card .review-thumbnail {
+    width: 215px; }
+  .review-card .review-author {
+    padding: 12px 10px 15px 10px;
+    border-bottom: 1px solid #ececec; }
+    .review-card .review-author p {
+      padding-bottom: 5px;
+      font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+      font-size: 12px;
+      color: #000;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .review-card .review-author em {
+      font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+      font-size: 11px;
+      font-style: normal;
+      color: #767676; }
+  .review-card .review-product {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 13px 11px; }
+    .review-card .review-product-img {
+      width: 33px;
+      height: 33px;
+      margin-right: 12px; }
+    .review-card .review-product-info h3 {
+      padding-bottom: 3px;
+      font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: #000;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .review-card .review-product-info .detail-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+      .review-card .review-product-info .detail-list div {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .review-card .review-product-info .detail-list dt,
+      .review-card .review-product-info .detail-list dd {
+        font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+        font-size: 11px; }
+      .review-card .review-product-info .detail-list dt {
+        color: #477a7b; }
+      .review-card .review-product-info .detail-list dd {
+        padding: 0 12px 0 3px;
+        color: #333; }
+
+.navBg {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  transition: height 200ms ease-in-out; }
+  .navBg.scroll {
+    height: 300px; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 300ms ease-in-out; }
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding-left: 10px; }
+  .header .main-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px; }
+    .header .main-logo a {
+      display: block; }
+  .header .menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px; }
+    .header .menu-btn .ham-wrap {
+      position: relative;
+      width: 20px;
+      height: 17px; }
+      .header .menu-btn .ham-wrap span {
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: #477a7b; }
+        .header .menu-btn .ham-wrap span:first-child {
+          top: 0; }
+        .header .menu-btn .ham-wrap span:nth-child(2) {
+          top: 8.5px; }
+        .header .menu-btn .ham-wrap span:last-child {
+          bottom: 0; }
+  .header .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .header .header-right .link-group a {
+      display: inline-block;
+      padding-right: 15px;
+      line-height: 40px;
+      color: #477a7b;
+      transition: opacity 300ms ease-in-out; }
+    .header .header-right .link-group a:hover,
+    .header .header-right .link-group a:active {
+      opacity: 0.6; }
+    .header .header-right .button-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 300ms ease-in-out; }
+      .header .header-right .button-group button:hover,
+      .header .header-right .button-group button:active,
+      .header .header-right .button-group a:hover,
+      .header .header-right .button-group a:active {
+        opacity: 0.6; }
+  .header:hover, .header:active {
+    background-color: #fff;
+    box-shadow: 0 1px 10px #ececec; }
+  @media screen and (min-width: 900px) {
+    .header-wrapper {
+      height: 100px;
+      padding: 0 10px; }
+    .header .main-logo {
+      position: static;
+      width: 160px;
+      transform: none; } }
+
+.visual .slick-slide {
+  height: 456px; }
+
+.visual .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 25px;
+  height: 25px;
+  background: url("./assets/images/ico_arrow.svg") no-repeat center;
+  background-size: contain; }
+  .visual .slick-arrow.slick-prev {
+    left: 10px;
+    transform: rotate(90deg); }
+  .visual .slick-arrow.slick-next {
+    right: 10px;
+    transform: rotate(-90deg); }
+  .visual .slick-arrow:active {
+    opacity: 0.6; }
+
+.visual-slider-item {
+  position: relative; }
+  .visual-slider-item .txt {
+    position: absolute;
+    top: 22%;
+    left: 8%; }
+    .visual-slider-item .txt a {
+      display: block; }
+    .visual-slider-item .txt h3 {
+      margin-bottom: 5px;
+      font-size: 23px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: -0.05em; }
+    .visual-slider-item .txt p {
+      font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+      font-size: 12px;
+      line-height: 1.6; }
+  .visual-slider-item.item01 {
+    color: #444;
+    background: url("./assets/images/seollalcoupon_main_mo.jpg") no-repeat center;
+    background-size: cover; }
+  .visual-slider-item.item02 {
+    color: #b15400;
+    background: url("./assets/images/microtofu_banner_mo.jpg") no-repeat center;
+    background-size: cover; }
+  .visual-slider-item.item03 {
+    color: #1a4148;
+    background: url("./assets/images/main-banner-mo.png") no-repeat center;
+    background-size: cover; }
+  .visual-slider-item.item04 {
+    color: #ff8624;
+    background: url("./assets/images/2022happy_banner_mo.jpg") no-repeat center;
+    background-size: cover; }
+  .visual-slider-item.item05 {
+    color: #3374af;
+    background: url("./assets/images/d_main_MO.png") no-repeat center;
+    background-size: cover; }
+  .visual-slider-item.item06 {
+    color: #54447e;
+    background: url("./assets/images/cat_main_MO.png") no-repeat center;
+    background-size: cover; }
+
+@media screen and (min-width: 500px) {
+  .visual-slider-item .txt h3 {
+    margin-bottom: 15px;
+    font-size: 30px; }
+  .visual-slider-item .txt p {
+    font-size: 15px; } }
+
+@media screen and (min-width: 900px) {
+  .visual .slick-slide {
+    height: 525px; }
+  .visual .slick-arrow {
+    width: 40px;
+    height: 40px; }
+  .visual-slider-item .txt {
+    top: 44%;
+    left: 10%; }
+    .visual-slider-item .txt h3 {
+      font-size: 45px; }
+    .visual-slider-item .txt p {
+      font-size: 18px; }
+  .visual-slider-item.item01 {
+    color: #444;
+    background: url("./assets/images/seollalcoupon_main_pc.jpg") no-repeat center;
+    background-size: cover; }
+  .visual-slider-item.item02 {
+    color: #b15400;
+    background: url("./assets/images/microtofu_banner_pc.jpg") no-repeat center;
+    background-size: cover; }
+  .visual-slider-item.item03 {
+    color: #1a4148;
+    background: url("./assets/images/main-banner-star.jpg") no-repeat center;
+    background-size: cover; }
+  .visual-slider-item.item04 {
+    color: #ff8624;
+    background: url("./assets/images/2022happy_banner_pc.jpg") no-repeat center;
+    background-size: cover; }
+  .visual-slider-item.item05 {
+    color: #3374af;
+    background: url("./assets/images/d_main_PC.png") no-repeat center;
+    background-size: cover; }
+  .visual-slider-item.item06 {
+    color: #54447e;
+    background: url("./assets/images/cat_main_PC.png") no-repeat center;
+    background-size: cover; } }
+
+.recom-product {
+  padding: 25px 0;
+  background-color: #f9f9ef; }
+  .recom-product-slider .product-infor {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 220px;
+    padding: 0 10px;
+    text-align: center; }
+    .recom-product-slider .product-infor h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #477a7b; }
+    .recom-product-slider .product-infor p {
+      font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      word-break: keep-all; }
+    .recom-product-slider .product-infor::before {
+      display: inline-block;
+      width: 100%;
+      height: 250px;
+      margin-bottom: 15px;
+      border: 1px solid #ececec;
+      content: '';
+      transition: opacity 200ms ease-in-out; }
+  .recom-product-slider .slider-item {
+    margin-right: 15px; }
+    .recom-product-slider .slider-item a:active .product-infor::before {
+      opacity: 0.7; }
+    .recom-product-slider .slider-item:last-child {
+      margin-right: 0; }
+    .recom-product-slider .slider-item.item01 .product-infor::before {
+      background: url("./assets/images/main_cushion_mo.jpg");
+      background-size: cover; }
+    .recom-product-slider .slider-item.item02 .product-infor::before {
+      background: url("./assets/images/blanket_main_s2.jpg");
+      background-size: cover; }
+    .recom-product-slider .slider-item.item03 .product-infor::before {
+      background: url("./assets/images/harness_lavender.jpg");
+      background-size: cover; }
+    .recom-product-slider .slider-item.item04 .product-infor::before {
+      background: url("./assets/images/cushionv2_main_s2.jpg");
+      background-size: cover; }
+    .recom-product-slider .slider-item.item05 .product-infor::before {
+      background: url("./assets/images/main_top_rcmnd_5.jpg");
+      background-size: cover; }
+    .recom-product-slider .slider-item.item06 .product-infor::before {
+      background: url("./assets/images/main_top_rcmnd_2.jpg");
+      background-size: cover; }
+  @media screen and (min-width: 500px) {
+    .recom-product {
+      padding: 35px 0; }
+      .recom-product-slider .slider-item {
+        margin-right: 25px; } }
+  @media screen and (min-width: 900px) {
+    .recom-product-slider .product-infor h3 {
+      font-size: 25px; }
+    .recom-product-slider .slider-item {
+      margin-right: 55px; }
+      .recom-product-slider .slider-item a:hover .product-infor::before {
+        opacity: 0.7; }
+    .recom-product-slider .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 40px;
+      height: 40px;
+      background: url("./assets/images/ico_arrow.svg") no-repeat center;
+      background-size: contain; }
+      .recom-product-slider .slick-arrow.slick-prev {
+        left: 0;
+        transform: rotate(90deg); }
+      .recom-product-slider .slick-arrow.slick-next {
+        right: 0;
+        transform: rotate(-90deg); }
+      .recom-product-slider .slick-arrow:active {
+        opacity: 0.6; } }
+
+.all-product {
+  padding: 40px 0; }
+  .all-product .inner {
+    padding: 0 10px; }
+  .all-product .section-title {
+    margin-bottom: 15px; }
+  .all-product .product-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 60px; }
+  .all-product .product-item {
+    position: relative;
+    width: calc(50% - 1vw);
+    height: 108vw;
+    max-height: 442px;
+    margin-right: 1vw;
+    margin-bottom: 20px; }
+    .all-product .product-item:nth-child(even) {
+      margin-right: 0; }
+    .all-product .product-item a {
+      display: block; }
+    .all-product .product-item .product-img {
+      position: relative;
+      margin-bottom: 12px; }
+      .all-product .product-item .product-img .label {
+        position: absolute;
+        top: 10px;
+        left: 10px; }
+    .all-product .product-item .product-info-title {
+      margin-bottom: 10px;
+      font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+      font-size: 14px; }
+    .all-product .product-item .product-info-price {
+      font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+      font-size: 12px; }
+      .all-product .product-item .product-info-price .price-off {
+        display: inline-block;
+        margin-bottom: 2px;
+        font-style: normal;
+        text-decoration: line-through; }
+    .all-product .product-item .cart-btn {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+  .all-product .more-btn {
+    position: relative;
+    display: block;
+    width: 220px;
+    height: 28px;
+    margin: 0 auto;
+    color: #477a7b;
+    border-bottom: 1px solid #477a7b; }
+    .all-product .more-btn:active {
+      opacity: 0.6; }
+  @media screen and (min-width: 500px) {
+    .all-product .product-item {
+      height: 88vw;
+      max-height: 660px; } }
+  @media screen and (min-width: 900px) {
+    .all-product .section-title {
+      margin-bottom: 30px; }
+    .all-product .product-item {
+      width: calc(25% - 10px);
+      max-height: 436px;
+      margin-right: 0; }
+    .all-product .more-btn {
+      font-size: 15px; }
+      .all-product .more-btn:hover {
+        opacity: 0.6; } }
+  @media screen and (min-width: 1280px) {
+    .all-product .inner {
+      width: 990px;
+      padding: 0;
+      margin: 0 auto; } }
+
+.banner-section .banner {
+  height: 100vw;
+  color: #fff; }
+  .banner-section .banner a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%; }
+  .banner-section .banner-txt {
+    position: absolute;
+    bottom: 5%;
+    left: 5%; }
+    .banner-section .banner-txt .banner-label {
+      display: inline-block;
+      margin-bottom: 2px;
+      font-size: 14px;
+      letter-spacing: -0.07em; }
+    .banner-section .banner-txt .banner-title {
+      font-size: 24px;
+      line-height: 1.3; }
+    .banner-section .banner-txt .banner-desc {
+      font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+      font-size: 15px; }
+  .banner-section .banner.banner01 {
+    width: 100%;
+    background: url("./assets/images/motherk.jpg") no-repeat center;
+    background-size: cover; }
+  .banner-section .banner.banner02 {
+    width: 100%;
+    background: url("./assets/images/section4_blanket.jpg") no-repeat center;
+    background-size: cover; }
+
+.banner-section .banner-bottom .banner03 .banner-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: #fff3d3;
+  text-align: center; }
+
+.banner-section .banner-bottom .banner03 video {
+  object-fit: cover; }
+
+@media screen and (min-width: 900px) {
+  .banner-section .banner {
+    height: 50vw; }
+    .banner-section .banner-txt .banner-label {
+      display: inline-block;
+      margin-bottom: 2px;
+      font-size: 14px;
+      letter-spacing: -0.07em; }
+    .banner-section .banner-txt .banner-title {
+      font-size: 42px;
+      font-weight: 300;
+      line-height: 1.2; }
+    .banner-section .banner-txt .banner-desc {
+      font-size: 18px; }
+  .banner-section .banner-top {
+    display: flex;
+    align-items: center;
+    justify-content: center; } }
+
+.review-section {
+  padding: 80px 0;
+  background-color: #f0e7d6; }
+  .review-section .section-title {
+    margin-bottom: 15px; }
+  .review-section .review-card {
+    margin-right: 20px; }
+    .review-section .review-card:last-child {
+      margin-right: 0; }
+
+.footer-top {
+  padding: 25px 0 20px 0;
+  background-color: #f5f5f5; }
+  .footer-top .fnb {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .footer-top .fnb li {
+      position: relative; }
+      .footer-top .fnb li:not(:last-child):after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 1px;
+        height: 12px;
+        background-color: #477a7b;
+        content: ''; }
+    .footer-top .fnb a {
+      display: inline-block;
+      padding: 5px;
+      font-size: 12px;
+      color: #477a7b; }
+
+.footer-bottom {
+  padding: 20px 0;
+  background-color: #fafafa; }
+  .footer-bottom .inner {
+    padding: 0 10px; }
+  .footer-bottom .tab-menu {
+    margin-bottom: 20px; }
+    .footer-bottom .tab-menu-item button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 13px;
+      font-weight: 600;
+      color: #487a7b; }
+    .footer-bottom .tab-menu-item.active .tab-content {
+      display: block;
+      margin-bottom: 20px; }
+    .footer-bottom .tab-menu-item.active button i {
+      transform: rotate(180deg); }
+    .footer-bottom .tab-menu .tab-content {
+      display: none;
+      font-size: 11px; }
+      .footer-bottom .tab-menu .tab-content ul {
+        margin-bottom: 20px; }
+      .footer-bottom .tab-menu .tab-content li,
+      .footer-bottom .tab-menu .tab-content p {
+        font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif; }
+  .footer-bottom .footer-detail-list li {
+    margin-bottom: 3px;
+    font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+    font-size: 11px; }
+  .footer-bottom .footer-detail-list img {
+    width: 100px; }
+
+@media screen and (min-width: 900px) {
+  .footer-bottom {
+    padding: 30px 0; }
+    .footer-bottom-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: row-reverse; }
+    .footer-bottom .tab-menu {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      width: 100%; }
+      .footer-bottom .tab-menu-item {
+        width: 50%; }
+        .footer-bottom .tab-menu-item button {
+          margin-bottom: 15px;
+          font-size: 15px;
+          cursor: unset; }
+        .footer-bottom .tab-menu-item .tab-content {
+          display: block;
+          font-size: 12px; }
+        .footer-bottom .tab-menu-item:last-child {
+          margin-top: -30px; }
+    .footer-bottom .footer-detail-list {
+      width: 50%; }
+      .footer-bottom .footer-detail-list li {
+        font-size: 12px; }
+      .footer-bottom .footer-detail-list img {
+        width: 140px; } }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 90%;
+  height: 100vh;
+  max-width: 380px;
+  padding: 190px 20px 20px 20px;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 0 100px 0 0;
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+  overscroll-behavior: contain;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+  .sidebar.active {
+    transform: translateX(0); }
+  .sidebar-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 380px;
+    padding: 15px 15px 0 15px;
+    background-color: #fff;
+    border-radius: 0 100px 0 0; }
+    .sidebar-header-wrap {
+      padding-bottom: 15px;
+      border-bottom: 1px solid #bfd1d1; }
+    .sidebar-header .logo {
+      width: 90px;
+      margin-bottom: 15px; }
+      .sidebar-header .logo a {
+        display: block; }
+    .sidebar-header p {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #477a7b;
+      word-break: keep-all; }
+    .sidebar-header .sidebar-auth {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+      .sidebar-header .sidebar-auth li {
+        padding-right: 10px; }
+        .sidebar-header .sidebar-auth li:first-child a {
+          color: #fff;
+          background-color: #477a7b; }
+        .sidebar-header .sidebar-auth li a {
+          display: inline-block;
+          padding: 0 13px;
+          font-size: 11px;
+          line-height: 27px;
+          color: #477a7b;
+          background-color: #f5f5f5;
+          border-radius: 30px; }
+  .sidebar-menu {
+    padding: 10px 0;
+    border-bottom: 1px solid #bfd1d1; }
+    .sidebar-menu .sidebar-tab .tab-menu button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 18px;
+      color: #477a7b; }
+      .sidebar-menu .sidebar-tab .tab-menu button i {
+        width: 20px;
+        height: 40px; }
+  .sidebar .promotion {
+    padding: 15px 0 35px 0;
+    border-bottom: 1px solid #bfd1d1; }
+    .sidebar .promotion h2 {
+      padding-bottom: 5px;
+      font-size: 12px;
+      color: #477a7b; }
+    .sidebar .promotion a {
+      display: block; }
+  .sidebar a {
+    display: inline-block;
+    padding: 5px 5px 5px 0;
+    font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", sans-serif;
+    font-size: 10px; }
+  .sidebar::-webkit-scrollbar {
+    display: none; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  transform: translateX(-100%); }
+  .overlay.active {
+    transform: translateX(0); }
+
+/*# sourceMappingURL=style.css.map */
