@@ -1,19 +1,15 @@
+//header scroll
 const header = document.querySelector('.header-wrapper');
 const gnb = document.querySelector('.gnb');
 const lnb = document.querySelectorAll('.lnb');
+const navBg = document.querySelector('.navBg');
 
-// gnb.addEventListener('mouseover', () => {
-//   header.style.height = '360px';
-// });
-
-// gnb.addEventListener('mouseleave', () => {
-//   header.style.height = '100px';
-// });
-// lnb.forEach((element) => {
-//   element.addEventListener('mouseover', () => {
-//     header.style.height = '320px';
-//   });
-// });
+gnb.addEventListener('mouseover', () => {
+  navBg.classList.add('scroll');
+});
+gnb.addEventListener('mouseleave', () => {
+  navBg.classList.remove('scroll');
+});
 
 //footer-tab
 const tabItem = document.querySelectorAll(
